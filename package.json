@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/spumko/travelogue.git"
+    "url": "git://github.com/hapijs/travelogue.git"
   },
   "main": "index",
   "keywords": [
@@ -44,7 +44,7 @@
   "licenses": [
     {
       "type": "BSD",
-      "url": "http://github.com/spumko/travelogue/raw/master/LICENSE"
+      "url": "http://github.com/hapijs/travelogue/raw/master/LICENSE"
     }
   ]
 }

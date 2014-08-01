@@ -1,11 +1,11 @@
-<a href="https://github.com/spumko"><img src="https://raw.github.com/spumko/spumko/master/images/from.png" align="right" /></a>
-![travelogue Logo](https://raw.github.com/spumko/travelogue/master/images/travelogue.png)
+<a href="https://github.com/hapijs"><img src="https://raw.github.com/hapijs/spumko/master/images/from.png" align="right" /></a>
+![travelogue Logo](https://raw.github.com/hapijs/travelogue/master/images/travelogue.png)
 
-[Passport.js](http://passportjs.org/) integration for [**hapi**](https://github.com/spumko/hapi)
+[Passport.js](http://passportjs.org/) integration for [**hapi**](https://github.com/hapijs/hapi)
 
-[![Build Status](https://secure.travis-ci.org/spumko/travelogue.png)](http://travis-ci.org/spumko/travelogue)
+[![Build Status](https://secure.travis-ci.org/hapijs/travelogue.png)](http://travis-ci.org/hapijs/travelogue)
 
-Travelogue is a [Hapi plugin](https://github.com/spumko/hapi/blob/master/docs/Reference.md#server-plugins) that provides modular and unobtrusive authentication to Hapi through Passport. Travelogue supports almost every Passport strategy including Facebook OAuth, Google OpenID, and many others listed [here](https://github.com/jaredhanson/passport/wiki/Strategies).
+Travelogue is a [Hapi plugin](https://github.com/hapijs/hapi/blob/master/docs/Reference.md#server-plugins) that provides modular and unobtrusive authentication to Hapi through Passport. Travelogue supports almost every Passport strategy including Facebook OAuth, Google OpenID, and many others listed [here](https://github.com/jaredhanson/passport/wiki/Strategies).
 
 
 ## Install
@@ -74,7 +74,7 @@ server.start(function () {
 
 #### Known Broken/Unsupported Strategies
 
-Check the [GitHub Issues area](https://github.com/spumko/travelogue/issues) for exisiting issues and to report an issue.
+Check the [GitHub Issues area](https://github.com/hapijs/travelogue/issues) for exisiting issues and to report an issue.
 
 
 ### Route Handling
