@@ -1,4 +1,4 @@
-![RIP](https://github.com/arb/travelogue/raw/dep/images/rip.png)
+![RIP](https://github.com/hapijs/travelogue/raw/master/images/rip.png)
 
 # No longer being maintained
 This module is no longer being maintained. There will be no future releases. Please migrate to either [hapi-auth-cookie](https://github.com/hapijs/hapi-auth-cookie) or [bell](https://github.com/hapijs/bell).
