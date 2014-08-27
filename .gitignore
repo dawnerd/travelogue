@@ -17,3 +17,5 @@ coverage.*
 lib-cov
 
 examples/*/config.json
+
+.c9/

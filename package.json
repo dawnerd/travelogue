@@ -1,15 +1,16 @@
 {
-  "name": "travelogue",
-  "description": "hapi passport.js integration helper",
+  "name": "travelogue-resurrected",
+  "description": "hapi passport.js integration helper - brought back from the grave",
   "version": "2.1.0",
   "author": "Van Nguyen <thegoleffect@gmail.com>",
   "contributors": [
     "Jared Hanson <jaredhanson@gmail.com>",
-    "Eran Hammer <eran@hueniverse.com> (http://hueniverse.com)"
+    "Eran Hammer <eran@hueniverse.com> (http://hueniverse.com)",
+    "Troy Whiteley <troy@somanyscientists.com">
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/hapijs/travelogue.git"
+    "url": "git@github.com:dawnerd/travelogue.git"
   },
   "main": "index",
   "keywords": [
@@ -44,7 +45,7 @@
   "licenses": [
     {
       "type": "BSD",
-      "url": "http://github.com/hapijs/travelogue/raw/master/LICENSE"
+      "url": "https://github.com/dawnerd/travelogue/blob/master/LICENSE"
     }
   ]
 }
