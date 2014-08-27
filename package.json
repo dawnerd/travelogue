@@ -24,20 +24,21 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "passport": "0.2.x",
-    "hoek": "2.x.x"
+    "hoek": "^2.4.1",
+    "passport": "^0.2.0"
   },
   "peerDependencies": {
-    "hapi": "4.x.x",
-    "yar": "2.x.x"
+    "hapi": "6.x.x",
+    "yar": "^2.4.0"
   },
   "devDependencies": {
-    "hapi": "4.x.x",
-    "joi": "3.x.x",
-    "lab": "3.x.x",
-    "complexity-report": "1.x.x",
-    "passport-local": "1.x.x",
-    "yar": "2.x.x"
+    "complexity-report": "^1.0.3",
+    "hapi": "^6.6.0",
+    "joi": "^4.6.2",
+    "lab": "^4.2.0",
+    "lab-bdd": "^0.1.0",
+    "passport-local": "^1.0.0",
+    "yar": "^2.4.0"
   },
   "scripts": {
     "test": "make test-cov"

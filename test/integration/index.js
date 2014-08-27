@@ -1,8 +1,7 @@
 // Load modules
-
 var Hapi = require('hapi');
 var Joi = require('joi');
-var Lab = require('lab');
+exports.lab = require('lab-bdd')(require('lab'));
 var LocalStrategy = require('passport-local');
 
 
@@ -10,27 +9,16 @@ var LocalStrategy = require('passport-local');
 
 var internals = {};
 
-
-// Test shortcuts
-
-var expect = Lab.expect;
-var before = Lab.before;
-var after = Lab.after;
-var describe = Lab.experiment;
-var it = Lab.test;
-
 function initServer(server, config) {
 
-    var plugins = {
-        yar: {
-            cookieOptions: {
-                password: 'secret'
-            }
-        },
-        '../../': config
-    };
-
-    server.pack.require(plugins, function (err) {
+    server.pack.register([
+      { plugin: require('yar'), options: {
+        cookieOptions: {
+            password: 'secret'
+        }
+      }},
+      { plugin: require('../../'), options: config}
+    ], function (err) {
 
         expect(err).to.not.exist;
 
@@ -43,7 +31,7 @@ function initServer(server, config) {
 
         server.auth.strategy('passport', 'passport');
 
-        var passport = server.plugins.travelogue.passport;
+        var passport = server.plugins['travelogue-resurrected'].passport;
 
         var strategy = new LocalStrategy.Strategy(function (username, password, done) {
 
@@ -97,7 +85,7 @@ describe('Travelogue non-API-mode', function () {
 
         initServer(server, config, done);
 
-        var passport = server.plugins.travelogue.passport;
+        var passport = server.plugins['travelogue-resurrected'].passport;
 
         // addRoutes
         server.route({
@@ -786,7 +774,7 @@ describe('Travelogue API-Mode', function () {
 
         initServer(server, config);
 
-        var passport = server.plugins.travelogue.passport;
+        var passport = server.plugins['travelogue-resurrected'].passport;
 
         server.route({
             method: 'POST',

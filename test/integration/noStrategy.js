@@ -1,24 +1,13 @@
 // Load modules
-
+exports.lab = require('lab-bdd')(require('lab'));
 var Hapi = require('hapi');
 var Joi = require('joi');
-var Lab = require('lab');
 var LocalStrategy = require('passport-local');
 
 
 // Declare internals
 
 var internals = {};
-
-
-// Test shortcuts
-
-var expect = Lab.expect;
-var before = Lab.before;
-var after = Lab.after;
-var describe = Lab.experiment;
-var it = Lab.test;
-
 
 describe('Travelogue', function () {
 
@@ -30,20 +19,18 @@ describe('Travelogue', function () {
         excludePaths: ['/excluded']
     };
 
-    var plugins = {
-        yar: {
-            cookieOptions: {
-                password: 'worldofwalmart'
-            }
-        },
-        '../../': config
-    };
-
     var server = new Hapi.Server(0);
 
     before(function (done) {
 
-        server.pack.require(plugins, function (err) {
+        server.pack.register([
+          { plugin: require('yar'), options: {
+            cookieOptions: {
+                password: 'secret'
+            }
+          }},
+          { plugin: require('../../'), options: config}
+        ], function (err) {
 
             expect(err).to.not.exist;
 
@@ -54,7 +41,7 @@ describe('Travelogue', function () {
 
             server.auth.strategy('passport', 'passport');
 
-            var passport = server.plugins.travelogue.passport;
+            var passport = server.plugins['travelogue-resurrected'].passport;
             passport.use(new LocalStrategy.Strategy(function (username, password, done) {
 
                 // Find or create user here...
