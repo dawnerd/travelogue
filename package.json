@@ -1,7 +1,7 @@
 {
   "name": "travelogue-resurrected",
   "description": "hapi passport.js integration helper - brought back from the grave",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": "Van Nguyen <thegoleffect@gmail.com>",
   "contributors": [
     "Jared Hanson <jaredhanson@gmail.com>",
